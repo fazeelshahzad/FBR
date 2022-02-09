@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-# Part of Dynexcel.
+# Part of Softhealer Technologies.
 {
     "name": "POS FBR Connector",
     
-    "author": "Dynexcel",
+    "author": "Softhealer Technologies",
     
-    "website": "https://www.dynexcel.com",
+    "website": "https://www.softhealer.com",
 
-    "support": "info@dynexcel.com",
+    "support": "support@softhealer.com",
         
     "version": "11.0.3",
     
