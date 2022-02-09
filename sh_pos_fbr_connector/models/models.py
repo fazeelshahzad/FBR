@@ -33,7 +33,7 @@ class POSOrder(models.Model):
     
     def post_data_fbi(self, pos_order_data):
         print('possss', pos_order_data)
-        fbr_url = "http://fbrapp.shopbrumano.com/rest/invoice/"
+        fbr_url = "https://esp.fbr.gov.pk:8244/FBR/v1/api/Live/PostData"
         header = {"Content-Type": "multipart/form-data"}
         invoice_number = ''
         if pos_order_data:
@@ -122,7 +122,7 @@ class POSOrder(models.Model):
             self.post_data_to_fbr(orders)
     
     def post_data_to_fbr(self, orders):
-        fbr_url = "http://fbrapp.shopbrumano.com/rest/invoice/"
+        fbr_url = "https://esp.fbr.gov.pk:8244/FBR/v1/api/Live/PostData"
         header = {"Content-Type": "multipart/form-data"}
         for order in orders:
             order = self.browse(order)
@@ -199,7 +199,7 @@ class POSOrder(models.Model):
         return res
 
     def return_data_fbi(self, pos_order_data):
-        fbr_url = "http://fbrapp.shopbrumano.com/rest/invoice/"
+        fbr_url = "https://esp.fbr.gov.pk:8244/FBR/v1/api/Live/PostData"
         header = {"Content-Type": "multipart/form-data"}
         invoice_number = ''
         if pos_order_data:
@@ -283,7 +283,7 @@ class POSOrder(models.Model):
             return [invoice_number]
 
     def return_data_from_fbr(self, orders):
-        fbr_url = "http://fbrapp.shopbrumano.com/rest/invoice/"
+        fbr_url = "https://esp.fbr.gov.pk:8244/FBR/v1/api/Live/PostData"
         header = {"Content-Type": "multipart/form-data"}
         for order in orders:
             order = self.browse(order)
